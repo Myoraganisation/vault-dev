@@ -28,6 +28,13 @@ spec:
       domain: ""
       namespaceSubDomain: -prd.
     key: production
+  - gitKind: github
+    gitServer: https://github.com
+    key: vault-prod
+    owner: Myoraganisation
+    promotionStrategy: Never
+    remoteCluster: true
+    repository: vault-prod
   ingress:
     domain: 34.28.244.66.nip.io
     kind: ingress
