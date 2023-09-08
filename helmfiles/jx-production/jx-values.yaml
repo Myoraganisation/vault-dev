@@ -31,11 +31,13 @@ jxRequirements:
   environments:
   - key: dev
   - key: staging
-  - key: production
+  - ingress:
+      domain: ""
+      namespaceSubDomain: -prd.
+    key: production
   ingress:
     domain: change.me
-    kind: ingress
-    namespaceSubDomain: -jx-production.
+    namespaceSubDomain: -prd.
     tls:
       email: ""
       enabled: false

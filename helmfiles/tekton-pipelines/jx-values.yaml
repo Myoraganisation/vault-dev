@@ -31,11 +31,14 @@ jxRequirements:
   environments:
   - key: dev
   - key: staging
-  - key: production
+  - ingress:
+      domain: ""
+      namespaceSubDomain: -prd.
+    key: production
   ingress:
     domain: change.me
     kind: ingress
-    namespaceSubDomain: -tekton-pipelines.
+    namespaceSubDomain: .
     tls:
       email: ""
       enabled: false

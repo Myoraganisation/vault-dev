@@ -17,10 +17,12 @@ spec:
   - key: dev
   - key: staging
   - key: production
+    ingress:
+      namespaceSubDomain: -prd.
   ingress:
     domain: ""
     externalDNS: false
-    namespaceSubDomain: -jx.
+    namespaceSubDomain: .
     tls:
       email: ""
       enabled: false
