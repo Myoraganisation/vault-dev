@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - Myoraganisation/vault-dev
-      target_url: http://lighthouse./merge/status
+      target_url: http://lighthouse.34.28.244.66.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null

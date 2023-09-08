@@ -44,7 +44,7 @@ jxRequirements:
       namespaceSubDomain: -prd.
     key: production
   ingress:
-    domain: change.me
+    domain: 34.28.244.66.nip.io
     namespaceSubDomain: -prd.
     tls:
       email: ""
