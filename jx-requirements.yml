@@ -5,29 +5,53 @@ spec:
     enabled: false
     schedule: ""
   cluster:
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    clusterName: tf-jx-infinite-shark
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
     gitKind: github
     gitName: github
     gitServer: https://github.com
+    gke:
+      projectNumber: "746866976253"
+    project: arched-backup-398010
     provider: gke
     registry: gcr.io
+    zone: us-central1-a
   environments:
   - key: dev
+    owner: Myoraganisation
+    repository: vault-dev
   - key: staging
-  - key: production
-    ingress:
+  - ingress:
+      domain: ""
       namespaceSubDomain: -prd.
+    key: production
   ingress:
     domain: ""
-    externalDNS: false
+    kind: ingress
     namespaceSubDomain: .
     tls:
       email: ""
       enabled: false
-      production: false
+      production: true
+  pipelineUser:
+    username: mani-bot9
   repository: nexus
   secretStorage: vault
-  vault: {}
+  storage:
+  - name: logs
+    url: gs://logs-tf-jx-infinite-shark-4aa9571e7fb6
+  - name: reports
+    url: gs://reports-tf-jx-infinite-shark-4aa9571e7fb6
+  - name: repository
+    url: gs://repository-tf-jx-infinite-shark-4aa9571e7fb6
+  terraformVault: true
+  vault:
+    bucket: vault-tf-jx-infinite-shark-4aa9571e7fb6
+    key: crypto-key-tf-jx-infinite-shark-4aa9571e7fb6
+    keyring: keyring-tf-jx-infinite-shark-4aa9571e7fb6
+    name: tf-jx-infinite-shark
+    serviceAccount: tf-jx-infinite-shark-vt
   webhook: lighthouse
